@@ -1,0 +1,928 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+body{
+    background-color: #F2F5FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F5FC;
+}
+.header-rectangle{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    top: 0px;
+    background: #FFFFFF;
+    white-space: nowrap;
+}
+.header-rectangle .fa-solid {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center; 
+  }
+  .header-rectangle .fa-solid a{
+   font-size: 500px;
+  }
+.header-rectangle .rain-text{
+    margin-left: 10px;
+    color: #002639;
+    font-size: 20px;
+    font-weight: 600px;
+}
+.header-rectangle .user-text{
+    float: right;
+    margin-right: 80px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.user-text .text-user{
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #002639;
+}
+.fa-bell:before {
+    content: "\f0f3";
+    /* NOTIFICATION */
+    /* top:-0.75em;
+    right: -0.75em;
+    background-color: red;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    position: absolute; */
+}
+#logout-container {
+    position: fixed;
+    top: 8%;
+    left: 83%;
+    display: none;
+    text-align: center;
+    background-color: white;
+    z-index: 3;
+    box-shadow: 0px 4px 4px rgba(0.25, 0.25, 0.25, 0.25);
+    border-radius: 5%;
+}
+
+#logout-container .button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+    width: 200px;
+}
+
+#logout-container .button-wrapper label {
+    color: #000;
+    cursor: pointer;
+    padding: 0;
+    display: inline-block;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.side-bar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background: #021620;
+    z-index: 1000;
+    transition: width 0.3s ease;
+}
+.side-bar.active {
+    width: 100px;
+  }
+  .side-bar.active .home-section{
+    left: 20px;
+  }
+
+  .side-bar.active .toggle-button{
+    left: 30px;
+    transition: left 0.3s ease;
+  }
+.side-bar-ul {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+}
+.side-bar-ul.active {
+    margin-left: 0;
+  }
+  .side-bar-ul.active a{
+    opacity: 0;
+  }
+  .toggle-button {
+    position: fixed;
+    top: 75px;
+    left: 200px;
+    transition: left 0.3s ease;
+    margin: 10px;
+  }
+.toggle-button-container{
+    position: fixed;
+    margin: 10px;
+    top: 71px;
+    left: 194px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #738892;
+    background-color: transparent;
+    border-radius: 10%;
+    transition: left 0.3s ease;
+    opacity: 50%;
+}
+.toggle-button{
+    color: #0fffcf;
+}
+.night-button{
+    position: fixed;
+    margin: 10px;
+    top: 71px;
+    left: 0;
+    width: 185px;
+    height: 30px;
+    border: 2px solid #738892;
+    background-color: transparent;
+    border-radius: 5%;
+    transition: left 0.9s ease;
+    opacity: 50%;
+}
+.side-bar.active .night-button{
+    visibility: hidden;
+    transition: left 0.3s ease;
+}
+.side-bar.active .toggle-button-container{
+    visibility: hidden;
+    transition: left 0.3s ease;
+}
+.fa-moon{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.side-bar-ul li {
+    margin-bottom: 80px;
+    list-style-type: none;
+}
+.side-bar-ul li a {
+    font-weight: 400;
+    transition-delay: 0.2s;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    transition: transform 0.2s, text-decoration 0.2s;
+    
+
+}
+.side-bar-ul li a:hover {
+    transform: translateX(10px);
+    text-decoration: underline;
+    transition-delay: 0.3s;
+    text-decoration-color: rgba(0, 0, 0, 0.5);
+  }
+.side-bar-ul .fa-solid {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+  }
+.side-bar-ul .fa-solid a {
+    margin-left: 20px;
+  }
+.side-bar .fa-angle-right{
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.header-bar{
+    display: flex;
+}
+.side-bar-header p{
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.home-small-boxes-for-378{
+    display: none;
+}
+.home-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 8%;
+    left: 21%;
+}
+
+.home-text {
+    margin-left: 10%;
+}
+.home-text label{
+    font-size: 35px;
+    font-weight: 400;
+}
+.water-container-box {
+    position: fixed;
+    width: 80%;
+    height: 400px;
+    max-width: 400px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 17%;
+    left: 43%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+}
+
+
+label {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #002639;
+}
+.water-tank  {
+    width: 50%;
+    height: 200px;
+    background-color: rgb(245, 239, 239);
+    margin-top: 20px;
+    border-radius: 5%;
+}
+.home-small-boxes {
+    display: flex;
+    position:fixed;
+    top: 70%;
+    left: 28%;
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+  }
+  
+.box {
+    
+    flex: 1;
+    height: 180px;
+    width: 180px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 5px;
+    top:250px;
+    margin: 0 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+.amount-of-water-img{
+    position: absolute;
+    left: 60px;
+    top: 15px;
+    width: 60px;
+    height: 60px;
+}
+.amount-of-water-text{
+    top: 5px;
+    right: 39rem;
+    height: 60px;
+    width: 90px;
+    position: absolute;
+    text-align: center;
+    color: rgba(0, 38, 57, 0.55);
+}
+.time-to-fill-img{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 20.813rem;
+    top: 1px;
+}
+.time-to-fill-text{
+    position: absolute;
+    top: 12px;
+    left: 25.625rem;
+    color: rgba(0, 38, 57, 0.55);
+}
+.sensor-status-img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 13px;
+    left: 39rem;
+}
+.sensor-status-text{
+    position: absolute;
+    top: 1px;
+    width: 40px;
+    left: 44.375rem;
+    color: rgba(0, 38, 57, 0.55);
+}
+.water-data{ 
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    color: #002639;
+}
+.fill-data{
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    color: #002639;
+}
+.water-percent{
+    position: absolute;
+    bottom: 10px; /* Adjust the bottom value as per your preference */
+    left: 17%;
+    transform: translateX(-50%);
+    color: #002639;
+}
+.time-percent{
+    position: absolute;
+    bottom: 10px; /* Adjust the bottom value as per your preference */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #002639;
+}
+.home-small-boxes a {
+    margin-left: 20px;
+  }
+  .home-small-boxes {
+    margin-top: 20px;
+  }
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.home-section{
+    display: none;
+    overflow: auto;
+}
+.for-378px{
+    display: none;
+}
+.reports-section{
+    display: none;
+}
+.reports-for-378px{
+    display: none;
+}
+/* report section */
+.reports-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 8%;
+    left: 21%;
+}
+
+.reports-text {
+    margin-left: 10%;
+}
+.reports-text label{
+    font-size: 35px;
+    font-weight: 400;
+}
+.reports-small-boxes{
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    position: absolute;
+    left: 28%;
+    margin-top: 10%;
+    z-index: -1;
+    position: absolute;
+}
+.reports-small-boxes .fa-solid a {
+    margin: 15px;
+  }
+.reports-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    height: 180px;
+    width: 180px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 5px;
+    top:250px;
+    margin: 0 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.reports-big-box {
+    position: absolute;
+    top: 45%;
+    left: 27%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+/* fill */
+.fill-history-box {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.fill-download{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.fill-graph{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(245, 239, 239);
+    margin: 10px;
+    
+}
+.fill-download button{
+    width: 120px;
+    padding: 10px;
+    background: #002639;
+    border-radius: 5px;
+    color: white;   
+}
+/* usage */
+.usage-history-box {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.usage-graph{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(245, 239, 239);
+    margin: 10px;
+}
+.usage-download{
+    display: flex;
+    justify-content: center;
+}
+.usage-download button{
+    width: 120px;
+    padding: 10px;
+    background: #002639;
+    border-radius: 5px;
+    color: white;  
+}
+/* sensors section */
+.sensors-section{
+    position: absolute;
+    left: 8%;
+}
+.sensors-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 8%;
+    left: 21%;
+}
+
+.sensors-text {
+    margin-left: 10%;
+}
+.sensors-text label{
+    font-size: 35px;
+    font-weight: 400;
+}
+/* sensor */
+.side-bar.active .sensors-text-container{
+    left: 8%;
+}
+.sensor-table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 5%;
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 20px 50px 20px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  th {
+    background-color: #002639;
+    font-weight: 500;
+    color: white;
+  }
+  
+  td {
+    background-color: #fff;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #eaeaea;
+  }
+@media (max-width:1024px) {
+    /* DASHBOARD */
+    .home-text-container {
+        left: 25%;
+    }
+    .home-small-boxes{
+        left: 20%;
+    }
+    /* REPORTS */
+    .reports-text-container{
+        left: 25%;
+    }
+    .reports-small-boxes{
+        left: 20%;
+        top: 3%;
+    }
+    .reports-big-box {
+        display: block;
+        top: 40%;
+        left: 40%;
+    }
+    .fill-history-box{
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    .usage-history-box{
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width:768px) {
+.side-bar {
+        width: 100px;
+    }
+.night-button{
+    visibility: hidden;
+}
+.toggle-button-container{
+    left: 25px;
+}
+.side-bar.active .night-button{
+    visibility: visible;
+}
+.toggle-button{
+    left: 30px;
+}
+.side-bar.active .toggle-button{
+    left: 200px;
+}
+.side-bar.active a{
+    opacity: 100%;
+}
+.side-bar ul a{
+    opacity: 0;
+}
+.side-bar.active{
+    width: 250px;
+}
+.side-bar.active .toggle-button-container {
+    visibility: visible;
+    left: 194px;
+}
+.home-text-container{
+    left: 15%;
+    top: 7%;
+}
+.water-container-box{
+    left: 30%;
+}
+.home-small-boxes{
+    left: 15%;
+}
+.box{
+    margin: 0 15px;
+}
+.amount-of-water-text{
+    right: 28rem;
+}
+.amount-of-water-img{
+    left: 30px;
+}
+.time-to-fill-text{
+    left: 19.225rem;
+}
+.time-to-fill-img{
+    left: 14.513rem;
+}
+.sensor-status-text{
+    left: 33.375rem;
+}
+.sensor-status-img{
+    left: 28rem;
+}
+#logout-container{
+    left: 72%;
+}
+/* reports */
+.reports-text-container{
+    left: 15%;
+    top: 5%;
+}
+.reports-small-boxes{
+    left: 12%;
+    top: 60px;
+}
+.reports-box{
+    margin: 10px 20px;
+}
+.reports-big-box {
+    display: block;
+    top: 40%;
+    left: 30%;
+}
+.fill-history-box{
+    margin-bottom: 50px;
+}
+.usage-history-box{
+    margin-bottom: 50px;
+}
+.reports-box .time-to-fill-text{
+    left: 20rem;
+}
+.reports-box .amount-of-water-text{
+    left: 6rem;
+}
+.reports-box .sensor-status-img{
+    left: 30rem;
+}
+.reports-box .sensor-status-text{
+    left: 35rem;
+}
+}
+
+@media (max-width:375px) {
+    .header-rectangle .rain-text{
+        font-size: 15px;
+    }
+    .header-rectangle .user-text {
+        margin-right: 50px;
+
+    }
+    .header-rectangle{
+        z-index: 3;
+    }
+    .user-text .text-user{
+        font-size: 15px;
+    }
+    /* DASHBOARD */
+    .home-text-container {
+        left: 12%;
+        top: 9.8%;
+    }
+    .home-text label{
+        font-size: 25px;
+    }
+
+    /* SIDEBAR */
+    .toggle-button{
+        left: 10px;
+        top: 60px;
+        color: #002639;
+    }
+    .toggle-button-container{
+        left: 5px;
+        top: 56px;
+        visibility: hidden;
+    }
+    .side-bar.active .toggle-button{
+        left: 140px;
+        color: #0fffcf;
+    }
+    .side-bar.active .toggle-button-container{
+        left: 134px;
+    }
+    .side-bar{
+        left: -120px;
+    }
+    .side-bar.active{
+        left: -60px;
+    }
+    .side-bar-ul{
+        left: 50px;
+        position: absolute;
+    }
+    .side-bar-ul li a{
+        font-size: 15px;
+    }
+    .night-button{
+        width: 125px;
+        top: 56px;
+    }
+    #logout-container .button-wrapper {
+        width: 100px;
+        z-index: 3;
+    }
+    .water-container-box{
+        z-index: -1;
+    }
+
+      /* REPORTS */
+      .reports-text-container {
+        left: 12%;
+        top: 9.7%;
+    
+    }
+    .reports-text label{
+        font-size: 25px;
+    }
+    .reports-small-boxes{
+        display: none;
+    }
+
+    .reports-big-box {
+        top: 15%;
+        left: 10%;
+    }
+    /* fill */
+    .fill-history-box {
+        width: 300px;
+        height: 300px;
+    }
+    .fill-graph{
+        width: 200px;
+        height: 200px;
+    }
+
+    /* usage */
+    .usage-history-box {
+        width: 300px;
+        height: 300px;
+
+    }
+    .usage-graph{
+        width: 200px;
+        height: 200px;
+    }
+    /* HOMEEE */
+    .water-container-box{
+        width: 80%;
+        height: 300px;
+        left: 10%;
+        top: 20%;
+    }
+    .home-small-boxes{
+        display: none;
+    }
+    
+    .home-small-boxes-for-378{
+        display: flex;
+    }
+    .scrollable-wrapper {
+        height: 200px; /* Set a fixed height for the wrapper */
+        overflow-y: auto; /* Enable vertical scrolling */
+    } 
+    .for-378px{
+        width: 100%;
+        top: 30rem;
+        left: 0;
+        position: fixed;
+        background: white;
+        right: 0;
+        overflow: auto;
+        display: flex;
+        
+    }
+    .for-378-small-boxes{
+        position: fixed;
+        top: 70%;
+        margin-top: 10px;
+        display: flex;
+        width: 100%;
+        height: 200px;
+        overflow: auto;
+        margin-bottom: 20px;
+
+    }
+    .amount-of-water-for-378{
+        top: 20px;
+        position: absolute;
+        width: 9.375rem;
+        height: 9.375rem;
+        left: 30px;
+        border-radius: 5%;
+        background: white;
+        box-shadow: 0px 4px 4px rgba(0.25, 0.25, 0.25, 0.25);
+    }
+    .time-to-fill-for-378{
+        top: 20px;
+        position: absolute;
+        width: 9.375rem;
+        height: 9.375rem;
+        left: 12.5rem;
+        border-radius: 5%;
+        background: white;
+        box-shadow: 0px 4px 4px rgba(0.25, 0.25, 0.25, 0.25);
+    }
+    .sensor-status-for-378{
+        top: 190px;
+        position: absolute;
+        width: 320px;
+        height: 9.375rem;
+        left: 30px;
+        border-radius: 5%;
+        background: white;
+        box-shadow: 0px 4px 4px rgba(0.25, 0.25, 0.25, 0.25);
+    }
+    .reports-for-378px{
+        display: block;
+    }
+    .amount-of-water-img-for-378{
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 60px;
+        height: 60px;
+    }
+    .time-to-fill-img-for-378{
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        left: 0;
+        top: 1px;
+    }
+    .sensor-status-img-for-378{
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        width: 60px;
+        height: 60px;
+    }
+    .amount-of-water-text-for-378{
+        top: 5px;
+        right: 3px;
+        height: 60px;
+        width: 90px;
+        position: absolute;
+        text-align: center;
+        font-size: 15px;
+        color: rgba(0, 38, 57, 0.55);
+    }
+    .time-to-fill-text-for-378{
+        top: 8px;
+        right: 0;
+        height: 60px;
+        width: 90px;
+        position: absolute;
+        text-align: center;
+        font-size: 15px;
+        color: rgba(0, 38, 57, 0.55);
+    }
+    .sensor-status-text-for-378{
+        top: 8px;
+        right: 15px;
+        height: 60px;
+        width: 90px;
+        position: absolute;
+        text-align: center;
+        font-size: 15px;
+        color: rgba(0, 38, 57, 0.55);
+    }
+    .water-data-for-378{
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        font-size: 18px;
+        color: #002639;
+    }
+    .fill-data-for-378{
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        font-size: 18px;
+        color: #002639;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@100;200;300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/login_page.css">
+</head>
+<body>
+    <div class="login-header">
+        <img src="img/logo-blackoutline.png">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="login-container">
+        <div class="sign-in-text">Sign in your account</div>
+        <form onsubmit="return loginUser(event)">
+            <div class="login-textbox-container">
+                <input type="text" class="login-username" id="uname" placeholder="Email" required="required">
+                <input type="password" class="login-password" id="pword" placeholder="Password" required="required">
+                <button class="login-button">Login</button>
+            </div>    
+        </form>
+        <div class="login-label">
+            <label class="register-label">Register</label>
+            <label class="forgotpass-label">Forgot Password</label>
+        </div>
+    </div>
+    <!-- LOGIN FORM -->
+    <script>
+        function loginUser(event){
+            event.preventDefault();
+
+            // values
+            var username = document.getElementById("uname").value;
+            var password = document.getElementById("pword").value;
+
+            if (username == "sample+email@gmail.com" & password == "123123"){
+                window.location.href = "dashboard.html";
+            }
+            else{
+                alert("Invalid input")
+            }
+            return false;
+        }
+    </script>
+    <!-- PASSWORD HIDE -->
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/login.css">
+    <title>Log in page</title>
+</head>
+<body>
+    <div class="pic">
+        <img src="img/bubble.png">
+    </div>
+
+    <div class="burger">
+        <input type="checkbox" id="menu-toggle" class="checboxx"/>
+        <label for="menu-toggle" class="mobile-menu">&#9776;</label>
+    </div>
+
+    <ul id="login_page_navigation" class="animate__animated animate__backInLeft">
+        <li><a href="index.html">Home</a></li>
+    </ul>
+    <div class="login_text animate__animated animate__backInLeft">Log in</div>
+    <form id="login-form">
+            <div class="username_textbox animate__animated animate__backInRight">
+                <input type="text" class="textbox_username" id="username" required="required">
+                  <span>Username</span>
+            </div>
+            
+            <div class="password_textbox animate__animated animate__backInRight">
+                <input type="password" id="password" class="textbox_password" required="required">
+                    <span>Password</span>
+                    <span class="password_toggle" onclick="togglePasswordVisibility()"></span>
+            </div>
+
+            <div class="login_form_button">
+                <button onclick="">Log-in</button>
+            </div>
+    </form>
+
+    <div class="forgotpass">Forgot password?</div>
+    <div class="create-acc">Register</div>
+    <!-- SCRIPT -->
+    <!-- LOGIN FORM -->
+    
+<script>
+  function togglePasswordVisibility() {
+  var passwordInput = document.querySelector('.textbox_password');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+      }
+}
+</script>
+<!-- SCRIPT NG LOG IN -->
+
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+  var menuToggle = document.getElementById('menu-toggle');
+  menuToggle.addEventListener('change', function () {
+    var loginPageNav = document.getElementById('login_page_navigation');
+    if (this.checked) {
+      loginPageNav.style.display = 'block';
+    } else {
+      loginPageNav.style.display = 'none';
+    }
+  });
+});
+</script>
+  <!-- <div class="bubbles">
+    <img src="img/bubble.png">
+    <img src="img/bubble.png">
+    <img src="img/bubble.png">
+    <img src="img/bubble.png">
+    <img src="img/bubble.png">
+    <img src="img/bubble.png">
+  </div> -->
+</body>
+</html> 

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@100;200;300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main_page.css">
+</head>
+<body>
+            <!-- Sectiong ng header -->
+    <section>
+        <div class="header-rectangle">
+            <a class="fa-solid fa-droplet" style="color: #11a1e8; margin-left: 20px; font-size: 25px;">
+                <span class="rain-text">Rain Harvesting System</span>
+            </a>
+            <span class="user-text fa-solid fa-bell">
+                <span class="text-user">User</span>
+                <i id="down-icon" class="fa-solid fa-angle-down" style="color: #002639;"></i>
+            </span>
+
+            <div id="logout-container">
+                <div class="button-wrapper">
+                    <label for="logout">Settings</label>
+                    <label for="settings">Sign out</label>
+                </div>
+            </div>
+            
+                    <!-- js para sa container ng settings pati sign ot -->
+            <script>
+                var downIcon = document.getElementById('down-icon');
+                var logoutContainer = document.getElementById('logout-container');
+            
+                downIcon.addEventListener('click', function(event) {
+                    logoutContainer.style.display = 'block';
+                    event.stopPropagation();
+                });
+            
+                document.addEventListener('click', function() {
+                    logoutContainer.style.display = 'none';
+                });
+            </script>
+                     <!-- xxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+        </div>     
+    </section>
+            <!-- xxxxxxxxxxxx -->
+                                <!-- Section ng side bar -->
+    <section>
+        <div class="side-bar">
+            <div class="night-button">
+                <i class="fa-solid fa-moon"style="color: #0fffcf; font-size: 20px;"></i>
+            </div>
+            <div class="toggle-button-container"> </div>
+                <i class="fa-solid fa-bars toggle-button" style=" cursor: pointer; font-size: 25px;"></i>
+            
+            <nav>
+                <ul class="side-bar-ul" >
+                    <li class="fa-solid fa-house-chimney" style="color: #0fffcf; cursor: pointer; font-size: 20px;"id="home"><a> Home</a></li>
+                    <li class="fa-solid fa-chart-line" style="color: #0fffcf; cursor: pointer; font-size: 20px;"id="reports"><a> Reports</a></li>
+                    <li class="fa-solid fa-gamepad" style="color: #0fffcf; cursor: pointer; font-size: 20px;"id="controls"><a> Controls</a></li>
+                    <li class="fa-solid fa-sliders" style="color: #0fffcf; cursor: pointer; font-size: 20px;"id="sensors"><a> Components</a></li>
+                </ul>   
+            </nav>
+        </div>            <!--  -->
+    </section>  
+        <!-- BUTTON SA SIDEBAR -->
+        <script>
+            const sidebar = document.querySelector('.side-bar');
+            const content = document.querySelector('.side-bar-ul');
+            const toggleButton = document.querySelector('.toggle-button');
+            
+            toggleButton.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+            content.classList.toggle('active');
+            });
+        </script>
+                                <!-- xxxxxxxxxxxxxxxxxxx -->
+   
+        <section class="home-section">
+        <div class="home-text-container">
+            <div class="home-text">
+                <label>Dashboard</label>
+            </div>
+        </div>
+            <div class="water-container-box">
+                <div class="water-tank">
+                  </div>
+                    <label>00.00%</label>
+            </div>
+    
+            <div class="home-small-boxes">
+                <div class="box">
+                    <img class="amount-of-water-img" src="img/water_level.png">
+                        <p class="amount-of-water-text">Amount of Water</p>
+                        <p class="water-data">00.00 Liters</p>
+                </div>
+                <div class="box">
+                    <img class="time-to-fill-img" src="img/fill.png">
+                        <p class="time-to-fill-text">Time to Fill</p>
+                        <p class="fill-data">00.00 minutes</p>
+                </div>
+                <div class="box" style="cursor: pointer;"> 
+                    <img class="sensor-status-img" src="img/status.png">
+                        <p class="sensor-status-text">Sensor Status</p>
+                </div>
+            </div>
+                    <!-- SMALL BOXES FOR 378px -->
+                    <section class="for-378px">
+
+                        <div class="scrollable-wrapper">
+                            <div class="for-378-small-boxes">
+                                <div class="amount-of-water-for-378">
+                                    <img class="amount-of-water-img-for-378" src="img/water_level.png">
+                                    <p class="amount-of-water-text-for-378">Amount of Water</p>
+                                    <p class="water-data-for-378">00.00 Liters</p>
+                                </div>
+                                <div class="time-to-fill-for-378">
+                                    <img class="time-to-fill-img-for-378" src="img/fill.png">
+                                    <p class="time-to-fill-text-for-378">Time to Fill</p>
+                                    <p class="fill-data-for-378">00.00 minutes</p>
+                                </div>   
+                                <div class="sensor-status-for-378">
+                                    <img class="sensor-status-img-for-378" src="img/status.png">
+                                    <p class="sensor-status-text-for-378">Sensor Status</p>
+                                </div>   
+                            </div>  
+                        </div>
+                    </section>
+    </section> 
+    <!-- report section -->
+    <section class="reports-section">
+        <div class="reports-text-container">
+            <div class="reports-text">
+                <label>Reports</label>
+            </div>
+        </div>
+
+        <div class="reports-small-boxes">
+            <div class="reports-box">
+                <img class="amount-of-water-img" src="img/water_level.png">
+                <p class="amount-of-water-text">Amount of Water</p>
+                <p class="water-data">00.00 Liters</p>
+            </div>
+            <div class="reports-box">
+                <img class="time-to-fill-img" src="img/fill.png">
+                <p class="time-to-fill-text">Time to Fill</p>
+                <p class="fill-data">00.00 minutes</p>
+            </div>
+            <div class="reports-box" style="cursor: pointer;">
+                <img class="sensor-status-img" src="img/status.png">
+                <p class="sensor-status-text">Sensor Status</p>
+            </div>
+        </div>
+
+        <div class="reports-big-box">
+            <div class="fill-history-box">
+                <div class="fill-graph"></div>
+                    <div class="fill-download">
+                        <button>Download</button>
+                    </div>
+            </div>
+            <div class="usage-history-box">
+                <div class="usage-graph"></div>
+                    <div class="usage-download">
+                        <button>Download</button>
+                    </div>
+            </div>
+        </div>
+            <section class="reports-for-378px">
+               <div class="three-boxes-for-reports-378px">
+                    <div class="reports-378px-box"></div>
+                    <div class="reports-378px-box"></div>
+               </div>
+            </section>
+    </section>
+    <!-- xxxxxxxxxxxxxx -->
+    <section class="sensors-section">
+        <div class="sensors-text-container">
+            <div class="sensors-text">
+                <label>Components</label>
+            </div>
+
+            <table class="sensor-table">
+                <tr>
+                  <th>Components list</th>
+                  <th>Last Update</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+                <tr>
+                  <td>Ultrasonic Sensor</td>
+                  <td>2 minutes ago</td>
+                  <td><i class="fa-solid fa-check"></i></td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>Water Level Float</td>
+                  <td>2 minutes ago</td>
+                  <td><i class="fa-solid fa-check"></i></td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                    <td>Flow Rate Sensor</td>
+                    <td>2 minutes ago</td>
+                    <td><i class="fa-solid fa-check"></i></td>
+                    <td>...</td>
+                  </tr>
+                  <tr>
+                    <td>xxxx</td>
+                    <td>xxxxx</td>
+                    <td><i class="fa-solid fa-check"></i></td>
+                    <td>...</td>
+                  </tr>
+              </table>
+        </div>
+    </section>
+                  <!-- <i class="fa-solid fa-check"></i> CHECK -->
+              <!-- <i class="fa-solid fa-x"></i> EKIS -->
+        <script>
+
+            var show_Reports = document.getElementById("reports"); //variablee ng reports
+            var show_Home = document.getElementById("home"); //variable ng home
+            var show_Controls = document.getElementById("controls"); //variable ng controls
+            var show_Sensors = document.getElementById("sensors"); //variable ng sensors
+            
+            var home_container = document.querySelector(".home-section");
+            var reports_container = document.querySelector(".reports-section");
+            // xx
+            var sensor_container = document.querySelector('.sensors-section');
+
+            // home
+            show_Reports.addEventListener("click", function() {
+                home_container.style.display = "none";
+                reports_container.style.display = "block";
+                sensor_container.style.display = "none";
+             });
+
+            //  reports
+             show_Home.addEventListener("click", function() {
+                home_container.style.display = "block";
+                reports_container.style.display = "none";
+                sensor_container.style.display = "none";
+              });
+
+            //   sensor
+              show_Sensors.addEventListener("click", function() {
+                home_container.style.display = "none";
+                reports_container.style.display = "none";
+                sensor_container.style.display = "block";
+              });
+        </script>
+</body>
+</html>
